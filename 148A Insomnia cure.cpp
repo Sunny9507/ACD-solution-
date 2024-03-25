@@ -11,8 +11,7 @@ int main() {
             cnt++;
     }
 
-    int damaged_dragons = cnt;
-    cout << damaged_dragons << endl;
+    cout << cnt << endl;
 
     return 0;
 }
