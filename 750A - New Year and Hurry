@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+    int d = 240 - k;
+    int cnt = 0, need = 0;
+    for (int i = 1; i <= n; i++) {
+        need += i*5;
+        if (need <= d) {
+            cnt++;
+        } else {
+            break; 
+        }
+    }
+    cout << cnt;
+    return 0;
+}
