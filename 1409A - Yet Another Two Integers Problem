@@ -6,15 +6,7 @@ int main() {
     while(t--){
         int a, b;
         cin >> a >> b;
-        if (a == b) {
-            cout << '0' << endl;
-        } else if (a < b) {
-            int moves = (b - a + 9) / 10; 
-            cout << moves << endl;
-        } else if (a > b) {
-            int moves = (a - b + 9) / 10; 
-            cout << moves << endl;
-        }
+        cout<<(abs(a-b)+9)/10<<endl;
     }
     return 0;
 }
