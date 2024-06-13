@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n, m;
+        cin >> n >> m;
+
+        vector<string> grid(n);
+        for (int i = 0; i < n; i++) {
+            cin >> grid[i];
+        }
+
+        int min_h = INT_MAX;
+        int max_h = -1;
+        int min_k = INT_MAX;
+        int max_k = -1;
+        
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(grid[i][j] == '#'){
+                    min_h = min(min_h, i);
+                    max_h = max(max_h, i);
+                    min_k = min(min_k, j);
+                    max_k = max(max_k, j);
+                }
+            }
+        }
+        
+        int center_h = (min_h + max_h) / 2;
+        int center_k = (min_k + max_k) / 2;
+        
+        cout << center_h + 1 << " " << center_k + 1 << endl;
+    }
+    return 0;
+}
